@@ -1,4 +1,4 @@
-// Copyright 2021 Danil Postvaykin <postvaykin01@mail.ru>
+// Copyright 2021 <milerol>>
 
 #ifndef INCLUDE_THREADPOOL_HPP_
 #define INCLUDE_THREADPOOL_HPP_
@@ -49,7 +49,7 @@ inline ThreadPool::ThreadPool(size_t threads)
               std::unique_lock<std::mutex> lock(this->queue_mutex);
               this->condition.wait(lock,
                                    [this]{ return this->stop ||
-                                                   !this->tasks.empty(); });
+                                                  !this->tasks.empty(); });
               if (this->stop && this->tasks.empty())
                 return;
               task = std::move(this->tasks.front());
