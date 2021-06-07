@@ -1,4 +1,4 @@
-// Copyright 2021 <elizavetamaikova>
+// Copyright 2021 <milerol181>
 
 #ifndef INCLUDE_DBCS_HPP_
 #define INCLUDE_DBCS_HPP_
